@@ -1,0 +1,5 @@
+Tag <% => Serve para controle de fluxo ex: if, for, while etc
+Tag <%= => Imprimi escpando caracteres
+Tag <%- => Imprime sem escapara caracteres
+Tag <%# => Comentário
+tag <%- => Serve também para dar include('CAMINHO/ARQUIVO');

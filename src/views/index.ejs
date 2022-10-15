@@ -1,0 +1,34 @@
+<%- include('includes/head'); %>
+
+<section class="container">
+    <h1>Seja Bem-vindo</h1>
+    <h1><%= titulo %></h1>
+    <section>
+        <%= umaVariavelLocal %>
+    </section>
+    <section>
+        <form action="/" method="POST">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <table>
+                <tr>
+                    <td><label for="nome">Nome: </label></td>
+                    <td><input type="text" name="nome" id="nome"></td>
+                </tr>
+                <tr>
+                    <td><label for="sobrenome">Sobrenome: </label></td>
+                    <td><input type="text" name="sobrenome" id="sobrenome"></td>
+                </tr>
+                <tr><td></td><td align="right"><button type="submit"> Enviar Formulário</button></td></tr>
+            </table>
+        </form>
+    </section>
+    <section>
+        <ul>
+            <% numeros.forEach(num => { %>
+                <li><%= num %></li>
+            <% }); %>
+        </ul>
+    </section>
+</section>
+
+<%- include('includes/footer'); %>
