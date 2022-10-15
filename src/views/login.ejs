@@ -6,25 +6,46 @@
         <div class="col-2"></div>
         
         <div class="col-8 my-4">
-            <h1 class="text-center">Agenda</h1>
-            <p class="text-center lead">Seus contatos estão logo abaixo</p>
+            <h1 class="text-center">Login</h1>
+            <p class="text-center lead">Entre com seu e-mail e senha ou se cadastre-se</p>
 
-            <div class="row my-3">
-                <div class="col">
-                    <div class="alert alert-danger">Erro Qualquer!</div>
+            <div class="row">
+                <div class="col-lg">
+                    <h3 class="text-center">Cadastre-se</h3>
+                    <form action="/login/register" method="post">
+                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                        <div class="mb-3 form-group">
+                            <label for="usuario-email" class="col-sm-2 col-form-label">Email</label>
+                            <input type="email" name="usuario-email" class="form-control" id="usuario-email" placeholder="email@email.com">
+                        </div>
+                        <div class="mb-3 form-group">
+                            <label for="senha-usuario" class="col-sm-2 col-form-label">Password</label>
+                            <input type="password" name="senha-usuario" class="form-control" id="senha-usuario" placeholder="digite sua senha">
+                        </div>
+                        <div class="mb-3 form-group">
+                          <input type="submit" value="Cadastre-se" class="btn btn-primary">
+                        </div>
+                    </form>
                 </div>
-            </div>
 
-            <div class="responsive-table my-3">
-                <table class="table">
-                    <tr>
-                        <td class="td">Nome</td>
-                        <td class="td">Sobrenome</td>
-                        <td class="td">Telefone</td>
-                        <td class="td">Email@email.com</td>
-                        <td class="td">Ações</td>
-                    </tr>
-                </table>
+
+                <div class="col-lg">
+                    <h3 class="text-center">Entrar</h3>
+                    <form action="/login/login" method="post">
+                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                        <div class="mb-3 form-group">
+                            <label for="usuario-email" class="col-sm-2 col-form-label">Email</label>
+                            <input type="email" name="usuario-email" class="form-control" id="usuario-email" placeholder="email@email.com">
+                        </div>
+                        <div class="mb-3 form-group">
+                            <label for="senha-usuario" class="col-sm-2 col-form-label">Password</label>
+                            <input type="password" name="senha-usuario" class="form-control" id="senha-usuario" placeholder="digite sua senha">
+                        </div>
+                        <div class="mb-3 form-group">
+                          <input type="submit" value="Cadastre-se" class="btn btn-success">
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
         
