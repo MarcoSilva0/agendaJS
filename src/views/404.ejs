@@ -1,16 +1,21 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404</title>
-</head>
-<body>
-    <section class="container">
-        <h1>Página não encontrada</h1>
-    </section>
-    <script src="./assets/js/bundle.js"></script>
-</body>
+<%- include('includes/head'); %>
+<%- include('includes/nav'); %>
 
-</html>
+<div class="container">
+    <div class="row">
+        <div class="col-2"></div>
+        
+        <div class="col-8 my-5">
+            <h1 class="display-1 text-center">
+                Erro 404!
+            </h1>
+            <p class="text-center lead">
+                A página que você procura parece não existir! 
+            </p>
+        </div>
+        
+        <div class="col-2"></div>
+    </div>
+</div>
+
+<%- include('includes/footer'); %>
