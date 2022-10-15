@@ -9,6 +9,8 @@
             <h1 class="text-center">Login</h1>
             <p class="text-center lead">Entre com seu e-mail e senha ou se cadastre-se</p>
 
+            <%- include('includes/messages');  %>
+
             <div class="row">
                 <div class="col-lg">
                     <h3 class="text-center">Cadastre-se</h3>
@@ -16,11 +18,11 @@
                         <input type="hidden" name="_csrf" value="<%= csrfToken %>">
                         <div class="mb-3 form-group">
                             <label for="usuario-email" class="col-sm-2 col-form-label">Email</label>
-                            <input type="email" name="usuario-email" class="form-control" id="usuario-email" placeholder="email@email.com">
+                            <input type="email" name="email" class="form-control" id="usuario-email" placeholder="email@email.com" required>
                         </div>
                         <div class="mb-3 form-group">
                             <label for="senha-usuario" class="col-sm-2 col-form-label">Password</label>
-                            <input type="password" name="senha-usuario" class="form-control" id="senha-usuario" placeholder="digite sua senha">
+                            <input type="password" name="password" class="form-control" id="senha-usuario" placeholder="digite sua senha" required>
                         </div>
                         <div class="mb-3 form-group">
                           <input type="submit" value="Cadastre-se" class="btn btn-primary">
@@ -35,11 +37,11 @@
                         <input type="hidden" name="_csrf" value="<%= csrfToken %>">
                         <div class="mb-3 form-group">
                             <label for="usuario-email" class="col-sm-2 col-form-label">Email</label>
-                            <input type="email" name="usuario-email" class="form-control" id="usuario-email" placeholder="email@email.com">
+                            <input type="email" name="email" class="form-control" id="usuario-email" placeholder="email@email.com" required>
                         </div>
                         <div class="mb-3 form-group">
                             <label for="senha-usuario" class="col-sm-2 col-form-label">Password</label>
-                            <input type="password" name="senha-usuario" class="form-control" id="senha-usuario" placeholder="digite sua senha">
+                            <input type="password" name="password" class="form-control" id="senha-usuario" placeholder="digite sua senha" required>
                         </div>
                         <div class="mb-3 form-group">
                           <input type="submit" value="Cadastre-se" class="btn btn-success">

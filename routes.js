@@ -9,6 +9,7 @@ route.get('/', homeController.index);
 
 //Rotas do Login
 route.get('/login', loginController.index);
+route.post('/login/register', loginController.register);
 
 
 //Exportação de todas as rotas
