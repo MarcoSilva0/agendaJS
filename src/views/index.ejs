@@ -3,28 +3,42 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-2"></div>
+        <div class="col-1"></div>
         
-        <div class="col-8 my-4">
+        <div class="col-10 my-4">
             <h1 class="text-center">Agenda</h1>
-            <p class="text-center lead">Seus contatos estão logo abaixo</p>
 
             <%- include('includes/messages');  %>
 
+            <% if(contatos.length > 0){ %>
             <div class="responsive-table my-3">
                 <table class="table">
+                    <thead>
+                        <td class="td"><strong> Nome</strong> </td>
+                        <td class="td"><strong> Sobrenome</strong> </td>
+                        <td class="td"><strong> Telefone</strong> </td>
+                        <td class="td"><strong> E-mail</strong> </td>
+                        <td class="td"><strong> Ações</strong></td>
+                    </thead>
+                    <% contatos.forEach(contato => { %>
                     <tr>
-                        <td class="td">Nome</td>
-                        <td class="td">Sobrenome</td>
-                        <td class="td">Telefone</td>
-                        <td class="td">Email@email.com</td>
-                        <td class="td">Ações</td>
+                        <td class="td"><%= contato.nome %></td>
+                        <td class="td"><%= contato.sobrenome %></td>
+                        <td class="td"><%= contato.telefone %></td>
+                        <td class="td"><%= contato.email %></td>
+                        <td class="td">
+                            <a href="/contato/<%= contato._id %>" class="text-primary">Editar</a>
+                            <a href="/contato/delete/<%= contato._id %>" class="text-danger">Deleter</a>
+                        </td>
                     </tr>
+                    <% }); %>
                 </table>
             </div>
         </div>
-        
-        <div class="col-2"></div>
+        <% } else{ %>
+            <p class="text-center lead">Seus contatos serão exibidos aqui</p>
+        <% } %>
+        <div class="col-1"></div>
     </div>
 </div>
 
